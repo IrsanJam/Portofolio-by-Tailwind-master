@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* perintah ketika di scroll */
+.navbar-fixed {
+  @apply fixed z-[9999] bg-transparent bg-white bg-opacity-80 shadow-md backdrop-blur-sm dark:bg-dark dark:bg-opacity-60;
+  /* box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1); */
+}
+
+/* memberikan class style / membuat hamburger menu */
+.hamburger-line {
+  @apply my-2 block h-[2px] w-[30px]  bg-secondary dark:bg-white;
+}
+
+/* ketika button di klik akan menambah / menghapus kelasnya sehingga muncul animasi x  */
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-3;
+}
